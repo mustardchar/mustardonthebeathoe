@@ -39,14 +39,16 @@ body, html {
 
 /* 🎛️ Button Container (Alignment) */
 .button-container {
-    position: absolute;   
-    bottom: 30%;
-    left: 1%;
+    position: absolute;
+    bottom: 20%; /* Adjusted spacing from the bottom */
+    left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 40px; /* Space between buttons */
+    justify-content: center; /* Ensure buttons are centered */
+    gap: 50px; /* Increased gap between buttons */
     z-index: 10;
 }
+
 
 /* 🎛️ Button Styles */
 /* Base Button Styles (Glassmorphism) */
@@ -54,23 +56,22 @@ body, html {
     background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border */
     border-radius: 12px; /* Smooth edges */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    backdrop-filter: blur(15px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
     color: #fff; /* White text */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Slight text shadow */
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Slightly increased padding */
     margin: 10px;
     cursor: pointer;
-    text-align: right;
+    text-align: center;
     transition: all 0.3s ease; /* Smooth animation */
 }
-
 /* 🔥 Hover Effect */
 .glow-btn:hover {
-    background: rgba(255, 255, 255, 0.4); /* Slightly brighter tint */
-    box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.8); /* Red glow */
-    transform: scale(1.05); /* Slight zoom */
+    background: rgba(255, 255, 255, 0.3); /* Slightly brighter tint */
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.8); /* White glow */
+    transform: scale(1.1); /* Slight zoom */
 }
 
 /* 🖤 Reset State */
@@ -81,16 +82,17 @@ body, html {
 }
 
 /* 🎯 Individual Button Colors */
+/* Individual Button Colors */
 #merch-btn {
-    background: rgba(255, 255, 255, 0.15);
+   background: rgba(255, 255, 255, 0.2);
 }
 
 #donate-btn {
-    background: rgba(255, 215, 0, 0.3); /* Gold tint */
+   background: rgba(255, 215, 0, 0.3); /* Gold tint */
 }
 
 #spicy-btn {
-    background: rgba(255, 69, 0, 0.3); /* Spicy Red tint */
+   background: rgba(255, 69, 0, 0.3); /* Spicy Red tint */
 }
 
 /* 🖼️ Logo Placeholder */
