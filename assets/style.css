@@ -41,7 +41,6 @@ body, html {
 .button-container {
     position: absolute;   
     top: 60%;
-    bottom: 40%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
