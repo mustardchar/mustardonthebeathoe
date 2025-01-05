@@ -40,16 +40,15 @@ body, html {
 /* 🎛️ Button Container (Improved Vertical Alignment) */
 .button-container {
     position: absolute;
-    top: 40%; /* Adjust this percentage to raise/lower buttons */
+    top: 55%; /* Adjust this value to move buttons slightly lower */
     left: 50%;
-    transform: translate(-50%, -50%); /* Ensures centering */
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center; /* Center buttons horizontally */
     gap: 60px; /* Space between buttons */
     z-index: 10;
 }
 
-}
 
 /* 🎛️ Button Styles (Refined Glassmorphism) */
 .glow-btn {
