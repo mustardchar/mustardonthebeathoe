@@ -48,13 +48,21 @@ body, html {
 }
 
 /* 🎛️ Button Styles */
+/* Glassmorphism Style for Buttons */
 .glow-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft white border */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 12px; /* Rounded corners */
+    padding: 15px 25px;
+    text-align: center;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: all 0.3s ease-in-out;
 }
 
@@ -76,10 +84,13 @@ body, html {
     color: #fff;
 }
 
+/* Hover State for Interaction */
 .glow-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
+
 
 /* 🖼️ Logo Placeholder */
 .logo-placeholder {
