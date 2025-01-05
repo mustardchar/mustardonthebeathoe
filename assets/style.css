@@ -41,7 +41,7 @@ body, html {
 
 .button-container {
     position: absolute;
-    bottom: 25%; /* Adjusted from 15% to 25% for higher placement */
+    bottom: 40%; /* Adjusted from 15% to 25% for higher placement */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
