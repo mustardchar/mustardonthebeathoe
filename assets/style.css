@@ -38,9 +38,10 @@ body, html {
 }
 
 /* 🎛️ Button Container (Improved Alignment) */
+
 .button-container {
     position: absolute;
-    bottom: 15%; /* Adjust spacing from the bottom */
+    bottom: 25%; /* Adjusted from 15% to 25% for higher placement */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
