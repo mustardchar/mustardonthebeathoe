@@ -74,11 +74,11 @@ Copy code
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* 🖤 Reset State */
-.glow-btn:hover {
-    background: rgba(255, 69, 0, 0.3); /* Slight red tint on hover */
-    box-shadow: 0 0 40px 15px rgba(255, 0, 0, 0.8); /* Red glow effect */
-    transform: scale(1.1); /* Slight zoom effect */
+/* Reset State */
+.glow-btn:not(:hover) {
+    background: rgba(0, 0, 0, 0); /* Return to black */
+    box-shadow: none;
+    transform: scale(1);
 }
 
    #merch-btn {
