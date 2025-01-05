@@ -40,8 +40,8 @@ body, html {
 /* 🎛️ Button Container (Alignment) */
 .button-container {
     position: absolute;
-    bottom: 10%;
-    left: 50%;
+    bottom: 50%;
+    right: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 40px; /* Space between buttons */
