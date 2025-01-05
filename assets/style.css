@@ -40,13 +40,15 @@ body, html {
 /* 🎛️ Button Container (Improved Vertical Alignment) */
 .button-container {
     position: absolute;
-    top: 35%; /* Adjust this value for higher placement */
+    top: 40%; /* Adjust this percentage to raise/lower buttons */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%); /* Ensures centering */
     display: flex;
     justify-content: center; /* Center buttons horizontally */
     gap: 60px; /* Space between buttons */
     z-index: 10;
+}
+
 }
 
 /* 🎛️ Button Styles (Refined Glassmorphism) */
