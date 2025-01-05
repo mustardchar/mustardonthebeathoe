@@ -41,7 +41,7 @@ body, html {
 .button-container {
     position: absolute;
     bottom: 50%;
-    left: 10%;
+    left: 0%;
     transform: translateX(-50%);
     display: flex;
     gap: 40px; /* Space between buttons */
