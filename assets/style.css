@@ -1,1 +1,94 @@
+/* 🌟 Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* 🎥 Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Push video behind content */
+}
+
+.video-background video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the screen */
+}
+
+/* 🔥 Dark Overlay (Optional, enhances text/button visibility) */
+.video-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+/* 🖥️ Button Container */
+.button-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20vh; /* Adjust spacing from top */
+}
+
+/* 🎛️ Button Styles */
+.glow-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#merch-btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+#donate-btn {
+    background: rgba(255, 215, 0, 0.3); /* Gold tint */
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+#spicy-btn {
+    background: rgba(255, 69, 0, 0.3); /* Spicy Red tint */
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.glow-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 🖼️ Logo Placeholder */
+.logo-placeholder {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
 
