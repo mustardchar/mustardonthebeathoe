@@ -37,7 +37,6 @@ body, html {
     z-index: 1;
 }
 
-Copy code
 /* 🎛️ Button Container (Alignment) */
 .button-container {
     position: absolute;
@@ -50,7 +49,7 @@ Copy code
 }
 
 /* 🎛️ Button Styles */
-/* Glassmorphism Style for Buttons */
+/* Base Button Styles (Glassmorphism) */
 .glow-btn {
     background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border */
@@ -69,41 +68,30 @@ Copy code
 
 /* 🔥 Hover Effect */
 .glow-btn:hover {
-    background: rgba(255, 69, 0, 0.2); /* Slightly brighter tint */
+    background: rgba(255, 255, 255, 0.4); /* Slightly brighter tint */
     box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.8); /* Red glow */
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Reset State */
+/* 🖤 Reset State */
 .glow-btn:not(:hover) {
     background: rgba(0, 0, 0, 0); /* Return to black */
     box-shadow: none;
     transform: scale(1);
 }
 
-   #merch-btn {
+/* 🎯 Individual Button Colors */
+#merch-btn {
     background: rgba(255, 255, 255, 0.15);
 }
 
 #donate-btn {
     background: rgba(255, 215, 0, 0.3); /* Gold tint */
-    backdrop-filter: blur(10px);
-    color: #fff;
 }
 
 #spicy-btn {
     background: rgba(255, 69, 0, 0.3); /* Spicy Red tint */
-    backdrop-filter: blur(10px);
-    color: #fff;
 }
-
-/* Hover State for Interaction */
-.glow-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-}
-
 
 /* 🖼️ Logo Placeholder */
 .logo-placeholder {
@@ -115,4 +103,3 @@ Copy code
     color: #fff;
     z-index: 2;
 }
-
