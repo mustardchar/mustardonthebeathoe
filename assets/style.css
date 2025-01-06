@@ -35,6 +35,7 @@ body, html {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
     z-index: 1;
+    
 }
 
 /* 🎛️ Button Container */
@@ -66,6 +67,7 @@ body, html {
     box-shadow: none; /* No shadow in dormant state */
 }
 
+
 /* 🔥 Hover State (Active, Glowing, Glassmorphic) */
 .glow-btn:hover {
     background: rgba(255, 255, 255, 0.2); /* Slight transparency */
@@ -94,6 +96,25 @@ body, html {
     box-shadow: 
         0 0 30px rgba(255, 69, 0, 0.8), 
         inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 🌐 Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px; /* Smaller space between buttons */
+        bottom: 20%; /* Adjust vertical placement */
+    }
+
+    .glow-btn {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .glow-btn:hover {
+        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6); /* Softer glow */
+        transform: scale(1.05);
+    }
 }
 
 /* 🖼️ Logo Placeholder */
