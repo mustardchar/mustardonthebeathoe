@@ -25,20 +25,7 @@ body, html {
     object-fit: cover; /* Ensures the video covers the screen */
 }
 
-/* 🔥 Dark Overlay (Enhances visibility of content) */
-.video-background::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
-    z-index: 1;
-}
-
 /* 🎭 Drape Effect - Fully Opaque and Consistent */
-/* Dark Room Drape */
 #drape {
     position: fixed;       /* Fixed to viewport */
     top: 0;
@@ -47,25 +34,10 @@ body, html {
     height: 100vh;         /* Covers full viewport height */
     background: #000000;   /* Solid black */
     z-index: 9999;         /* Above all other elements */
-    pointer-events: none;  /* Prevent drape from blocking user interactions (if required later) */
-}
-/* Dark Room Drape */
-#drape {
-    position: fixed;       /* Fixed to viewport */
-    top: 0;
-    left: 0;
-    width: 100vw;          /* Covers full viewport width */
-    height: 100vh;         /* Covers full viewport height */
-    background: #000000;   /* Solid black */
-    z-index: 9999;         /* Above all other elements */
-    pointer-events: none;  /* Prevents blocking interactions (if required later) */
+    pointer-events: none;  /* Prevents blocking interactions */
 }
 
-
-
-
-
-/* 🎛️ Button Container (Centered and Adjustable) */
+/* 🎛️ Button Container */
 .button-container {
     position: absolute;
     bottom: 35%;
@@ -79,50 +51,31 @@ body, html {
 
 /* 🎛️ Default Button State (Dormant) */
 .glow-btn {
-    background: rgba(0, 0, 0, 1); /* Fully black */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
-    border-radius: 20px; /* Smooth rounded corners */
-    color: #fff; /* White text */
+    background: rgba(0, 0, 0, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #fff;
     font-weight: bold;
     font-size: 16px;
     padding: 14px 28px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: none; /* No shadow in dormant state */
+    box-shadow: none;
 }
 
-/* 🔥 Hover State (Active, Glowing, Glassmorphic) */
+/* 🔥 Hover State */
 .glow-btn:hover {
-    background: rgba(255, 255, 255, 0.15); /* Slight transparency */
-    backdrop-filter: blur(12px); /* Glass effect */
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 
-        0 0 40px rgba(255, 255, 255, 0.6), /* Outer glow */
-        inset 0 0 20px rgba(255, 255, 255, 0.5); /* Inner glow */
-    transform: scale(1.05); /* Slight zoom */
-}
-
-/* 🎯 Individual Button Hover Colors */
-#merch-btn:hover {
-    box-shadow: 
-        0 0 40px rgba(0, 123, 255, 0.8), 
+        0 0 40px rgba(255, 255, 255, 0.6),
         inset 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
 }
 
-#donate-btn:hover {
-    box-shadow: 
-        0 0 40px rgba(255, 215, 0, 0.8), 
-        inset 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-#spicy-btn:hover {
-    box-shadow: 
-        0 0 40px rgba(255, 69, 0, 0.8), 
-        inset 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-/* 📱 Responsive Design for Mobile Devices */
+/* 📱 Responsive Design */
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
@@ -133,10 +86,5 @@ body, html {
     .glow-btn {
         font-size: 14px;
         padding: 10px 20px;
-    }
-
-    .glow-btn:hover {
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
-        transform: scale(1.05);
     }
 }
