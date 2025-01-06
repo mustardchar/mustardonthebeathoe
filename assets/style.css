@@ -37,20 +37,18 @@ body, html {
     z-index: 1;
 }
 
-
 /* 🎭 Drape Effect - Fully Opaque and Consistent */
 .drape {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* Adjust as needed for intended coverage */
+    width: 50%; /* Covers exactly 50% of the screen width */
     height: 100%;
     background: rgba(0, 0, 0, 1); /* Fully opaque black */
     z-index: 2; /* Above video, below buttons */
     pointer-events: none; /* Prevent interaction */
-    transition: none; /* Prevent animation glitches */
+    transition: none; /* No animation effects */
 }
-
 
 /* 🎛️ Button Container (Centered and Adjustable) */
 .button-container {
