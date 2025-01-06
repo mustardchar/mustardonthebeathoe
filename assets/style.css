@@ -42,13 +42,14 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%; /* Adjust as needed: 50% for half-screen coverage */
     height: 100%;
     background: rgba(0, 0, 0, 1); /* Fully opaque black */
-    z-index: 2; /* Ensure it's above the video and text placeholders */
+    z-index: 2; /* Above video, below buttons */
     pointer-events: none; /* Prevent interaction */
-    transition: none; /* Prevent fade-in/out animation glitches */
+    transition: none; /* Prevent animation glitches */
 }
+
 
 /* 🌟 Drape Overlay */
 .drape {
