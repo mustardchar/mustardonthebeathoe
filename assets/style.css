@@ -38,16 +38,16 @@ body, html {
 }
 
 /* 🎭 Drape Effect - Fully Opaque and Consistent */
-.drape {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 50vw !important; /* Ensures exact half-screen width */
-    height: 100vh !important; /* Ensures full-screen height */
-    background: #000 !important; /* Solid opaque black */
-    z-index: 9999 !important; /* Ensure it's on top of everything */
-    pointer-events: none !important; /* Prevent interaction */
-    transition: none !important; /* Disable animations */
+/* Dark Room Drape */
+#drape {
+    position: fixed;       /* Fixed to viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;          /* Covers full viewport width */
+    height: 100vh;         /* Covers full viewport height */
+    background: #000000;   /* Solid black */
+    z-index: 9999;         /* Above all other elements */
+    pointer-events: none;  /* Prevent drape from blocking user interactions (if required later) */
 }
 
 
