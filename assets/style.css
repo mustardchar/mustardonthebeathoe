@@ -37,12 +37,13 @@ body, html {
     z-index: 1;
 }
 
+
 /* 🎭 Drape Effect - Fully Opaque and Consistent */
 .drape {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* Adjust as needed: 50% for half-screen coverage */
+    width: 50%; /* Adjust as needed for intended coverage */
     height: 100%;
     background: rgba(0, 0, 0, 1); /* Fully opaque black */
     z-index: 2; /* Above video, below buttons */
@@ -50,17 +51,6 @@ body, html {
     transition: none; /* Prevent animation glitches */
 }
 
-
-/* 🌟 Drape Overlay */
-.drape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%; /* Adjust as per your requirement */
-    height: 100%; /* Ensure it covers the intended space */
-    background: rgba(0, 0, 0, 1); /* Fully opaque black */
-    z-index: 2; /* Ensure it sits above the video but below buttons */
-}
 
 /* 🎛️ Button Container (Centered and Adjustable) */
 .button-container {
