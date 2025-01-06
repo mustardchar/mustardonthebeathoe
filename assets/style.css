@@ -49,6 +49,19 @@ body, html {
     z-index: 9999;         /* Above all other elements */
     pointer-events: none;  /* Prevent drape from blocking user interactions (if required later) */
 }
+/* Dark Room Drape */
+#drape {
+    position: fixed;       /* Fixed to viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;          /* Covers full viewport width */
+    height: 100vh;         /* Covers full viewport height */
+    background: #000000;   /* Solid black */
+    z-index: 9999;         /* Above all other elements */
+    pointer-events: none;  /* Prevents blocking interactions (if required later) */
+}
+
+
 
 
 
