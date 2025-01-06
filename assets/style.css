@@ -39,16 +39,17 @@ body, html {
 
 /* 🎭 Drape Effect - Fully Opaque and Consistent */
 .drape {
-    position: absolute !important;
+    position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-    width: 50% !important;
-    height: 100% !important;
-    background: rgba(0, 0, 0, 1) !important; /* Fully opaque black */
-    z-index: 2 !important; /* Above video, below buttons */
+    width: 50vw !important; /* Ensures exact half-screen width */
+    height: 100vh !important; /* Ensures full-screen height */
+    background: #000 !important; /* Solid opaque black */
+    z-index: 9999 !important; /* Ensure it's on top of everything */
     pointer-events: none !important; /* Prevent interaction */
-    transition: none !important; /* No animation effects */
+    transition: none !important; /* Disable animations */
 }
+
 
 
 /* 🎛️ Button Container (Centered and Adjustable) */
