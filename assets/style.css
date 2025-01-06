@@ -125,3 +125,80 @@ body, html {
     color: #fff;
     z-index: 2;
 }
+
+/* 🌟 Button Container (Alignment) */
+.button-container {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Space between buttons */
+    z-index: 10;
+}
+
+/* 🎛️ Default Button State (Dormant) */
+.glow-btn {
+    background: rgba(0, 0, 0, 1); /* Fully black */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+    border-radius: 16px; /* Smooth rounded corners */
+    color: #fff; /* White text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
+    font-weight: bold;
+    font-size: 16px; /* Readable text */
+    padding: 14px 28px; /* Balanced padding */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth animation */
+    box-shadow: none;
+}
+
+/* 🔥 Hover State (Active, Glowing, Glassmorphic) */
+.glow-btn:hover {
+    background: rgba(255, 255, 255, 0.15); /* Translucent frosted glass */
+    backdrop-filter: blur(12px); /* Glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    box-shadow: 
+        0 0 40px rgba(255, 255, 255, 0.6), /* Outer glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.4); /* Inner glow */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* 🎯 Individual Button Hover Colors */
+#merch-btn:hover {
+    box-shadow: 
+        0 0 40px rgba(0, 123, 255, 0.8), /* Blue glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#donate-btn:hover {
+    box-shadow: 
+        0 0 40px rgba(255, 215, 0, 0.8), /* Gold glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#spicy-btn:hover {
+    box-shadow: 
+        0 0 40px rgba(255, 69, 0, 0.8), /* Spicy red glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* 📱 Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px; /* Smaller gap between buttons */
+        bottom: 25%;
+    }
+
+    .glow-btn {
+        font-size: 14px; /* Smaller text */
+        padding: 10px 20px; /* Compact padding */
+    }
+
+    .glow-btn:hover {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+        transform: scale(1.05);
+    }
+}
