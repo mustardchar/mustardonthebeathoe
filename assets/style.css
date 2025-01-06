@@ -38,95 +38,7 @@ body, html {
 }
 
 /* 🎛️ Button Container (Centered and Adjustable) */
-.button-container {
-    position: absolute;
-    bottom: 30%; /* Adjust vertical placement */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* Space between buttons */
-    z-index: 10;
-}
-
-/* 🎛️ Default Button State (Dormant, Dark) */
-.glow-btn {
-    background: rgba(0, 0, 0, 0.9); /* Dark default state */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
-    border-radius: 16px; /* Smooth edges */
-    backdrop-filter: blur(3px); /* Slight blur */
-    -webkit-backdrop-filter: blur(3px); /* Safari support */
-    color: #fff; /* White text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Slight text shadow */
-    font-weight: bold;
-    padding: 14px 28px; /* Adjust button size */
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: none; /* No shadow in default state */
-}
-
-/* 🔥 Hover State (Active, Glowing, Glassmorphic) */
-.glow-btn:hover {
-    background: rgba(255, 255, 255, 0.2); /* Slight transparency */
-    backdrop-filter: blur(15px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(15px); /* Safari support */
-    box-shadow: 
-        0 0 30px rgba(255, 255, 255, 0.8), /* Outer glow */
-        inset 0 0 10px rgba(255, 255, 255, 0.5); /* Inner glow */
-    transform: scale(1.1); /* Slight zoom */
-}
-
-/* 🎯 Individual Button Colors (Hover Only) */
-#merch-btn:hover {
-    box-shadow: 
-        0 0 30px rgba(0, 123, 255, 0.8), 
-        inset 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-#donate-btn:hover {
-    box-shadow: 
-        0 0 30px rgba(255, 215, 0, 0.8), 
-        inset 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-#spicy-btn:hover {
-    box-shadow: 
-        0 0 30px rgba(255, 69, 0, 0.8), 
-        inset 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-/* 🌐 Responsive Design for Mobile Devices */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 20px; /* Smaller space between buttons */
-        bottom: 20%; /* Adjust vertical placement */
-    }
-
-    .glow-btn {
-        padding: 10px 20px; /* Adjust button padding */
-        font-size: 14px; /* Adjust font size */
-    }
-
-    .glow-btn:hover {
-        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6); /* Softer glow */
-        transform: scale(1.05);
-    }
-}
-
-/* 🖼️ Logo Placeholder */
-.logo-placeholder {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-}
-
-/* 🌟 Button Container (Alignment) */
+/* 🌟 Button Container */
 .button-container {
     position: absolute;
     bottom: 35%;
@@ -134,7 +46,7 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 60px; /* Space between buttons */
+    gap: 60px;
     z-index: 10;
 }
 
@@ -142,59 +54,58 @@ body, html {
 .glow-btn {
     background: rgba(0, 0, 0, 1); /* Fully black */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
-    border-radius: 16px; /* Smooth rounded corners */
+    border-radius: 20px; /* Smooth rounded corners */
     color: #fff; /* White text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
     font-weight: bold;
-    font-size: 16px; /* Readable text */
-    padding: 14px 28px; /* Balanced padding */
+    font-size: 16px;
+    padding: 14px 28px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth animation */
-    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none; /* No shadow in dormant state */
 }
 
 /* 🔥 Hover State (Active, Glowing, Glassmorphic) */
 .glow-btn:hover {
-    background: rgba(255, 255, 255, 0.15); /* Translucent frosted glass */
+    background: rgba(255, 255, 255, 0.15); /* Slight transparency */
     backdrop-filter: blur(12px); /* Glass effect */
     -webkit-backdrop-filter: blur(12px); /* Safari support */
     box-shadow: 
         0 0 40px rgba(255, 255, 255, 0.6), /* Outer glow */
-        inset 0 0 20px rgba(255, 255, 255, 0.4); /* Inner glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.5); /* Inner glow */
     transform: scale(1.05); /* Slight zoom */
 }
 
 /* 🎯 Individual Button Hover Colors */
 #merch-btn:hover {
     box-shadow: 
-        0 0 40px rgba(0, 123, 255, 0.8), /* Blue glow */
+        0 0 40px rgba(0, 123, 255, 0.8), 
         inset 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 #donate-btn:hover {
     box-shadow: 
-        0 0 40px rgba(255, 215, 0, 0.8), /* Gold glow */
+        0 0 40px rgba(255, 215, 0, 0.8), 
         inset 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 #spicy-btn:hover {
     box-shadow: 
-        0 0 40px rgba(255, 69, 0, 0.8), /* Spicy red glow */
+        0 0 40px rgba(255, 69, 0, 0.8), 
         inset 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* 📱 Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 20px; /* Smaller gap between buttons */
+        flex-direction: column;
+        gap: 20px;
         bottom: 25%;
     }
 
     .glow-btn {
-        font-size: 14px; /* Smaller text */
-        padding: 10px 20px; /* Compact padding */
+        font-size: 14px;
+        padding: 10px 20px;
     }
 
     .glow-btn:hover {
