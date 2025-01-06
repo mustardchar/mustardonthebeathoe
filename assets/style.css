@@ -50,12 +50,6 @@ body, html {
     transition: none; /* Prevent fade-in/out animation glitches */
 }
 
-/* Hide placeholder text until fully loaded */
-.logo-placeholder {
-    visibility: hidden;
-    z-index: -1;
-}
-
 /* 🌟 Drape Overlay */
 .drape {
     position: absolute;
