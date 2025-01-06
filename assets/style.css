@@ -1,4 +1,4 @@
-/* 🌟 Global  Styles */
+/* 🌟 Global Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@ body, html {
     object-fit: cover; /* Ensures the video covers the screen */
 }
 
-/* 🔥 Dark Overlay (Optional, enhances text/button visibility) */
+/* 🔥 Dark Overlay (Enhances visibility of content) */
 .video-background::after {
     content: "";
     position: absolute;
@@ -35,24 +35,23 @@ body, html {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
     z-index: 1;
-    
 }
 
-/* 🎛️ Button Container */
+/* 🎛️ Button Container (Centered and Adjustable) */
 .button-container {
     position: absolute;
-    bottom: 35%;
+    bottom: 30%; /* Adjust vertical placement */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 50px; /* Space between buttons */
     z-index: 10;
 }
 
 /* 🎛️ Default Button State (Dormant, Dark) */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.8); /* Dark button, nearly opaque */
+    background: rgba(0, 0, 0, 0.9); /* Dark default state */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
     border-radius: 16px; /* Smooth edges */
     backdrop-filter: blur(3px); /* Slight blur */
@@ -60,13 +59,12 @@ body, html {
     color: #fff; /* White text */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Slight text shadow */
     font-weight: bold;
-    padding: 16px 32px; /* Larger padding for better size */
+    padding: 14px 28px; /* Adjust button size */
     cursor: pointer;
     text-align: center;
-    transition: all 0.3s ease; /* Smooth animation */
-    box-shadow: none; /* No shadow in dormant state */
+    transition: all 0.3s ease;
+    box-shadow: none; /* No shadow in default state */
 }
-
 
 /* 🔥 Hover State (Active, Glowing, Glassmorphic) */
 .glow-btn:hover {
@@ -74,7 +72,7 @@ body, html {
     backdrop-filter: blur(15px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(15px); /* Safari support */
     box-shadow: 
-        0 0 30px rgba(255, 0, 0, 0.6), /* Outer glow */
+        0 0 30px rgba(255, 255, 255, 0.8), /* Outer glow */
         inset 0 0 10px rgba(255, 255, 255, 0.5); /* Inner glow */
     transform: scale(1.1); /* Slight zoom */
 }
