@@ -68,17 +68,23 @@ body, html {
         0 0 10px rgba(255, 0, 0, 0.4); /* Subtle red glow */;
     z-index: 10001; /* Ensures buttons are interactive above drape */
 }
-
 /* 📱 Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        gap: 40px; /* Adjust gap for smaller screens */
+        gap: 50px; /* Comfortable spacing for mobile */
         bottom: 25%;
     }
 
     .glow-btn {
-        font-size: 16px; /* Slightly smaller text on mobile */
-        padding: 16px 32px; /* Adjusted padding for smaller buttons */
+        font-size: 18px; /* Slightly smaller text on mobile */
+        padding: 20px 36px; /* Adjusted padding for smaller buttons */
     }
+
+    .glow-btn:hover {
+        box-shadow: 
+            0 0 30px rgba(255, 0, 0, 0.8),
+            inset 0 0 15px rgba(255, 0, 0, 0.5);
+        transform: scale(1.05);
+    
 }
