@@ -37,6 +37,7 @@ body, html {
     pointer-events: none;  /* Prevent interactions with the drape itself */
 }
 
+
 /* 🎛️ Button Container (Spacing Adjustments) */
 .button-container {
     position: absolute;
@@ -45,20 +46,19 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 80px; /* Increased gap for better spacing */
+    gap: 100px; /* Increased gap for better spacing */
     z-index: 10000; /* Ensure buttons are above the drape */
 }
 
-
-/* 🎛️ Default Button State (Transparent & Subtle Red Glow) */
+/* 🎛️ Default Button State (Padding & Size Adjustments) */
 .glow-btn {
     background: rgba(0, 0, 0, 0.2); /* Slight transparency */
     border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
-    border-radius: 16px; /* Smooth corners */
+    border-radius: 24px; /* Smooth corners, more rounded */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 16px;
-    padding: 14px 28px;
+    font-size: 18px; /* Larger font size */
+    padding: 20px 40px; /* Increased padding for larger buttons */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -69,34 +69,16 @@ body, html {
     z-index: 10001; /* Ensures buttons are interactive above drape */
 }
 
-/* 🔥 Hover State (Enhanced Red Glow & Transparency) */
-.glow-btn:hover {
-    background: rgba(255, 0, 0, 0.2); /* Slight transparency with red tint */
-    backdrop-filter: blur(12px); /* Enhanced glass effect */
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 
-        0 0 40px rgba(255, 0, 0, 0.8), /* Strong red outer glow */
-        inset 0 0 20px rgba(255, 0, 0, 0.5); /* Strong red inner glow */
-    transform: scale(1.1); /* Slight zoom effect */
-    
-}
 /* 📱 Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        gap: 30px; /* Adjust gap for smaller screens */
+        gap: 40px; /* Adjust gap for smaller screens */
         bottom: 25%;
     }
 
     .glow-btn {
-        font-size: 14px;
-        padding: 12px 24px; /* Adjusted padding for smaller buttons */
-    }
-
-    .glow-btn:hover {
-        box-shadow: 
-            0 0 30px rgba(255, 0, 0, 0.8),
-            inset 0 0 15px rgba(255, 0, 0, 0.5);
-        transform: scale(1.05);
+        font-size: 16px; /* Slightly smaller text on mobile */
+        padding: 16px 32px; /* Adjusted padding for smaller buttons */
     }
 }
