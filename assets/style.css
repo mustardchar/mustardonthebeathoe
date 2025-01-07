@@ -49,37 +49,52 @@ body, html {
     z-index: 10000; /* Ensure buttons are above the drape */
 }
 
-/* 🎛️ Default Button State (Dormant - Text Always Visible) */
+/* 🎛️ Default Button State (Glassmorphic Transparency) */
 .glow-btn {
-    background: transparent; /* Fully transparent background */
-    border: none;
-    color: #fff; /* White text always visible */
+    background: rgba(0, 0, 0, 0.3); /* Subtle transparency */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+    border-radius: 16px; /* Slightly rounded corners */
+    color: #fff; /* White text */
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     padding: 14px 28px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: none;
-    z-index: 10001; /* Ensures buttons are interactive above drape */
+    backdrop-filter: blur(6px); /* Subtle glass effect */
+    -webkit-backdrop-filter: blur(6px); /* Safari support */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle inner glow */
+    z-index: 10001; /* Ensure interaction above the drape */
 }
 
-/* 🔥 Hover State (Active Glow) */
+/* 🔥 Hover State (Enhanced Transparency & Glow) */
 .glow-btn:hover {
-    background: rgba(255, 0, 0, 0.2); /* Slight transparency with red tint */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1); /* Enhanced transparency */
+    backdrop-filter: blur(14px); /* Stronger glass effect */
+    -webkit-backdrop-filter: blur(14px); /* Safari support */
     box-shadow: 
-        0 0 40px rgba(255, 0, 0, 0.8), /* Red outer glow */
-        inset 0 0 20px rgba(255, 0, 0, 0.5); /* Inner red glow */
-    transform: scale(1.05); /* Slight zoom */
+        0 0 50px rgba(255, 69, 0, 0.8), /* Outer glow in red */
+        inset 0 0 25px rgba(255, 255, 255, 0.5); /* Inner glow */
+    transform: scale(1.1); /* Slight zoom */
 }
 
 /* 🎯 Individual Button Styles */
-#merch-btn,
-#donate-btn,
+#merch-btn {
+    box-shadow: 
+        0 0 40px rgba(0, 123, 255, 0.8), /* Blue glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#donate-btn {
+    box-shadow: 
+        0 0 40px rgba(255, 215, 0, 0.8), /* Yellow glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
 #spicy-btn {
-    color: #fff; /* Ensures consistent text color */
+    box-shadow: 
+        0 0 40px rgba(255, 69, 0, 0.8), /* Red glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* 📱 Responsive Design for Mobile Devices */
