@@ -49,17 +49,16 @@ body, html {
     z-index: 10000; /* Ensure buttons are above the drape */
 }
 
-/* 🎛️ Button Styles - Unified Text Size and Padding */
+/* 🎛️ Button Width Adjustment */
 .glow-btn {
     background: rgba(0, 0, 0, 0.2); /* Slight transparency */
     border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
     border-radius: 16px; /* Smooth corners */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 14px; /* Uniform font size */
-    line-height: 1.2; /* Prevents text wrapping */
-    white-space: nowrap; /* Ensures text stays on one line */
-    padding: 18px 40px; /* Balanced padding */
+    font-size: 14px; /* Keep font size unchanged */
+    padding: 14px 28px; /* Keeps text spacing intact */
+    min-width: 25%; /* Increase button width by 25% */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -70,8 +69,7 @@ body, html {
     z-index: 10001; /* Ensures buttons are interactive above drape */
 }
 
-
-/* 🔥 Hover State */
+/* 🔥 Hover State (Enhanced Red Glow & Transparency) */
 .glow-btn:hover {
     background: rgba(255, 0, 0, 0.2); /* Slight transparency with red tint */
     backdrop-filter: blur(12px); /* Enhanced glass effect */
@@ -79,28 +77,5 @@ body, html {
     box-shadow: 
         0 0 40px rgba(255, 0, 0, 0.8), /* Strong red outer glow */
         inset 0 0 20px rgba(255, 0, 0, 0.5); /* Strong red inner glow */
-    transform: scale(1.1); /* Slight zoom effect */
-}
-
-/* 📱 Mobile Adjustments */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-        gap: 20px; /* Adjust gap for smaller screens */
-        bottom: 25%;
-    }
-
-    .glow-btn {
-        font-size: 12px; /* Consistent smaller font size */
-        padding: 14px 28px; /* Adjusted padding for mobile */
-    }
-}
-
-
-    .glow-btn:hover {
-        box-shadow: 
-            0 0 30px rgba(255, 0, 0, 0.8),
-            inset 0 0 15px rgba(255, 0, 0, 0.5);
-        transform: scale(1.05);
-    }
+    transform: scale(1.05); /* Slight zoom effect */
 }
