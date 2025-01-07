@@ -48,7 +48,6 @@ body, html {
     gap: 50px; /* Consistent spacing between buttons */
     z-index: 10000; /* Ensure buttons are above the drape */
 }
-
 /* 🎛️ Button Width Adjustment */
 .glow-btn {
     background: rgba(0, 0, 0, 0.2); /* Slight transparency */
