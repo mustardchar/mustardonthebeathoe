@@ -1,3 +1,4 @@
+
 /* 🌟 Global Styles */
 body, html {
     margin: 0;
@@ -58,7 +59,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 16px;
-    padding: 26px 40px; /* Ensures consistent spacing */
+    padding: 40px 40px; /* Ensures consistent spacing */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
