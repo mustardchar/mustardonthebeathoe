@@ -50,36 +50,46 @@ body, html {
     z-index: 10000; /* Ensure buttons are above the drape */
 }
 
-/* 🎛️ Default Button State (Size, Padding, Glow) */
+/* 🎛️ Default Button State (Transparent & Subtle Red Glow) */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.5); /* Slight transparency */
-    border: 1px solid rgba(255, 0, 0, 0.5); /* Subtle red border */
-    border-radius: 30px; /* Smooth corners for a refined look */
+    background: rgba(0, 0, 0, 0.2); /* Slight transparency */
+    border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
+    border-radius: 16px; /* Smooth corners */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 20px; /* Slightly larger font size for visibility */
-    padding: 24px 48px; /* Larger padding for prominent buttons */
+    font-size: 16px;
+    padding: 14px 28px; /* Ensures consistent spacing */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(6px); /* Light glass effect */
+    backdrop-filter: blur(6px); /* Slight glass effect */
     -webkit-backdrop-filter: blur(6px); /* Safari support */
     box-shadow: 
-        0 0 20px rgba(255, 0, 0, 0.6), /* Outer red glow */
-        inset 0 0 10px rgba(255, 0, 0, 0.4); /* Inner subtle red glow */;
+        0 0 10px rgba(255, 0, 0, 0.4); /* Subtle red glow */;
     z-index: 10001; /* Ensures buttons are interactive above drape */
 }
-/* 🔥 Hover State (Enhanced Glow & Slight Zoom) */
-.glow-btn:hover {
-    background: rgba(255, 0, 0, 0.2); /* Slight transparency with red tint */
-    backdrop-filter: blur(12px); /* Enhanced glass effect */
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 
-        0 0 50px rgba(255, 0, 0, 0.8), /* Strong red outer glow */
-        inset 0 0 25px rgba(255, 0, 0, 0.6); /* Strong red inner glow */;
-    transform: scale(1.1);
 
-    }
+/* 🔥 Hover State (Enhanced Red Glow & Transparency) */
+.glow-btn:hover {
+    background: rgba(255, 0, 0, 0.1); /* Slight transparency with red tint */
+    backdrop-filter: blur(10px); /* Enhanced glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 
+        0 0 50px rgba(255, 0, 0, 0.9), /* Strong red outer glow */
+        inset 0 0 25px rgba(255, 0, 0, 0.6); /* Strong red inner glow */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* 🎛️ Button Container (Spacing Adjustments) */
+.button-container {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 90px; /* Slightly increased gap for visual balance */
+    z-index: 10000; /* Ensure buttons are above the drape */
 }
 
 /* 📱 Responsive Design for Mobile Devices */
