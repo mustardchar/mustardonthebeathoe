@@ -60,6 +60,7 @@ body, html {
     font-weight: bold;
     font-size: 12px;
     padding: 50px 90px; /* Ensures consistent spacing */
+    box-sizing: border-box;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
