@@ -58,7 +58,7 @@ body, html {
     border-radius: 16px; /* Smooth corners */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     padding: 40px 80px; /* Ensures consistent spacing */
     text-align: center;
     cursor: pointer;
