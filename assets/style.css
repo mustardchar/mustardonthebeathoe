@@ -45,7 +45,7 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 30px; /* Slightly reduced spacing for tighter alignment */
+    gap: 15px; /* Reduced spacing for closer alignment */
     z-index: 10000;
 }
 
