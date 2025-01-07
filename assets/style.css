@@ -58,7 +58,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 16px;
-    padding: 18px 36px; /* Ensures consistent spacing */
+    padding: 26px 40px; /* Ensures consistent spacing */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -132,7 +132,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 14px; /* Keep font size unchanged */
-    padding: 18px 36px; /* Increased padding for larger button area */
+    padding: 26px 40px; /* Increased padding for larger button area */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
