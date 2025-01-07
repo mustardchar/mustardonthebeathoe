@@ -45,9 +45,10 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 40px; /* Reduced spacing for tighter alignment */
+    gap: 30px; /* Slightly reduced spacing for tighter alignment */
     z-index: 10000;
 }
+
 
 /* 🎛️ Button Style */
 .glow-btn {
