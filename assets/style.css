@@ -45,7 +45,7 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 100px; /* Proper spacing between buttons */
+    gap: 40px; /* Reduced spacing for tighter alignment */
     z-index: 10000;
 }
 
