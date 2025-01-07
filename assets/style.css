@@ -37,7 +37,7 @@ body, html {
     pointer-events: none;  /* Prevent interactions with the drape itself */
 }
 
-/* 🎛️ Button Container */
+/* 🎛️ Button Container (Spacing Adjustments) */
 .button-container {
     position: absolute;
     bottom: 35%;
@@ -45,9 +45,10 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 80px; /* Increased gap for better spacing */
     z-index: 10000; /* Ensure buttons are above the drape */
 }
+
 
 /* 🎛️ Default Button State (Transparent & Subtle Red Glow) */
 .glow-btn {
@@ -77,18 +78,19 @@ body, html {
         0 0 40px rgba(255, 0, 0, 0.8), /* Strong red outer glow */
         inset 0 0 20px rgba(255, 0, 0, 0.5); /* Strong red inner glow */
     transform: scale(1.1); /* Slight zoom effect */
+    
 }
 /* 📱 Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px; /* Adjust gap for smaller screens */
         bottom: 25%;
     }
 
     .glow-btn {
         font-size: 14px;
-        padding: 10px 20px;
+        padding: 12px 24px; /* Adjusted padding for smaller buttons */
     }
 
     .glow-btn:hover {
