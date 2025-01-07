@@ -27,17 +27,17 @@ body, html {
 
 /* 🎭 Drape Effect - Fully Opaque and Consistent */
 #drape {
-    position: fixed;       /* Fixed to viewport */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;          /* Covers full viewport width */
-    height: 100vh;         /* Covers full viewport height */
-    background: #000000;   /* Solid black */
-    z-index: 9999;         /* Above all other elements */
-    pointer-events: none;  /* Prevent interactions with the drape itself */
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    z-index: 9999;
+    pointer-events: none;
 }
 
-/* 🎛️ Button Container (Spacing Adjustments) */
+/* 🎛️ Button Container */
 .button-container {
     position: absolute;
     bottom: 35%;
@@ -45,36 +45,61 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 50px; /* Consistent spacing between buttons */
-    z-index: 10000; /* Ensure buttons are above the drape */
+    gap: 100px; /* Proper spacing between buttons */
+    z-index: 10000;
 }
-/* 🎛️ Button Width Adjustment */
+
+/* 🎛️ Button Style */
 .glow-btn {
     background: rgba(0, 0, 0, 0.2); /* Slight transparency */
     border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
     border-radius: 16px; /* Smooth corners */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 14px; /* Keep font size unchanged */
-    padding: 14px 28px; /* Keeps text spacing intact */
-    min-width: 25%; /* Increase button width by 25% */
+    font-size: 14px; /* Consistent font size */
+    padding: 24px 48px; /* Balanced internal spacing */
+    min-width: 350px; /* Fixed width for larger appearance */
+    min-height: 180px; /* Fixed height for proportional look */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(4px); /* Light glass effect */
-    -webkit-backdrop-filter: blur(4px); /* Safari support */
+    backdrop-filter: blur(6px); /* Light glass effect */
+    -webkit-backdrop-filter: blur(6px); /* Safari support */
     box-shadow: 
-        0 0 10px rgba(255, 0, 0, 0.4); /* Subtle red glow */;
-    z-index: 10001; /* Ensures buttons are interactive above drape */
+        0 0 20px rgba(255, 0, 0, 0.4); /* Subtle red glow */;
+    z-index: 10001;
 }
 
-/* 🔥 Hover State (Enhanced Red Glow & Transparency) */
+/* 🔥 Hover State */
 .glow-btn:hover {
     background: rgba(255, 0, 0, 0.2); /* Slight transparency with red tint */
     backdrop-filter: blur(12px); /* Enhanced glass effect */
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 
-        0 0 40px rgba(255, 0, 0, 0.8), /* Strong red outer glow */
-        inset 0 0 20px rgba(255, 0, 0, 0.5); /* Strong red inner glow */
+        0 0 60px rgba(255, 0, 0, 0.8), /* Strong red outer glow */
+        inset 0 0 30px rgba(255, 0, 0, 0.6); /* Strong red inner glow */
     transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* 📱 Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        gap: 40px; /* Adjust spacing for mobile */
+        bottom: 25%;
+    }
+
+    .glow-btn {
+        font-size: 14px; /* Consistent text size */
+        padding: 16px 32px; /* Adjusted padding for mobile */
+        min-width: 80%; /* Wider buttons on mobile */
+        min-height: 120px; /* Balanced height */
+    }
+
+    .glow-btn:hover {
+        box-shadow: 
+            0 0 40px rgba(255, 0, 0, 0.8),
+            inset 0 0 20px rgba(255, 0, 0, 0.5);
+        transform: scale(1.05);
+    }
 }
