@@ -59,7 +59,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 12px;
-    padding: 40px 90px; /* Ensures consistent spacing */
+    padding: 50px 90px; /* Ensures consistent spacing */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
