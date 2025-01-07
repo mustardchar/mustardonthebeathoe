@@ -49,30 +49,36 @@ body, html {
     z-index: 10;
 }
 
-/* 🎛️ Default Button State (Dormant) */
+/* 🎛️ Default Button State (Dormant - Text Always Visible) */
 .glow-btn {
-    background: rgba(0, 0, 0, 1); /* Fully black */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
-    border-radius: 20px; /* Smooth rounded corners */
-    color: #fff; /* White text */
+    background: transparent; /* Fully transparent background */
+    border: none;
+    color: #fff; /* White text always visible */
     font-weight: bold;
     font-size: 16px;
     padding: 14px 28px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: none; /* No shadow in dormant state */
+    box-shadow: none;
 }
 
-/* 🔥 Hover State (Active, Glowing, Glassmorphic) */
+/* 🔥 Hover State (Active Glow) */
 .glow-btn:hover {
-    background: rgba(255, 255, 255, 0.15); /* Slight transparency */
-    backdrop-filter: blur(12px); /* Glass effect */
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    background: rgba(255, 0, 0, 0.2); /* Slight transparency with red tint */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 
-        0 0 40px rgba(255, 0, 0, 0.8), /* Outer red glow */
+        0 0 40px rgba(255, 0, 0, 0.8), /* Red outer glow */
         inset 0 0 20px rgba(255, 0, 0, 0.5); /* Inner red glow */
     transform: scale(1.05); /* Slight zoom */
+}
+
+/* 🎯 Individual Button Styles (Optional for fine-tuning) */
+#merch-btn,
+#donate-btn,
+#spicy-btn {
+    color: #fff; /* Ensures consistent text color */
 }
 
 /* 📱 Responsive Design for Mobile Devices */
