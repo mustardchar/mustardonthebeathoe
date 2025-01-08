@@ -25,16 +25,16 @@ body, html {
     object-fit: cover; /* Ensures the video covers the screen */
 }
 
-/* 🎭 Drape Effect - Fully Opaque and Consistent */
+/* 🎭 Drape Effect - Ensure Buttons Can "Cut Through" */
 #drape {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #000000; /* Solid black */
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent drape */
     z-index: 9999;
-    pointer-events: none;
+    pointer-events: none; /* Prevent blocking interactions */
 }
 
 /* 🎛️ Button Container (Adjusted Alignment and Spacing) */
@@ -49,35 +49,37 @@ body, html {
     z-index: 10000;
 }
 
-/* /* 🌟 Glassmorphism Core Refinement */
+
+/* 🌟 True Glassmorphism Effect on Buttons */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.2); /* Slightly transparent black */
+    background: rgba(0, 0, 0, 0.1); /* Light transparency to allow video through */
     border: 1px solid rgba(255, 0, 0, 0.3); /* Subtle red border */
-    border-radius: 16px; /* Smooth rounded corners */
-    color: #fff; /* Clear white text */
+    border-radius: 16px;
+    color: #fff;
     font-weight: bold;
     font-size: 14px;
-    padding: 16px 32px; /* Balanced spacing */
+    padding: 16px 32px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(15px) saturate(120%); /* Refined glass effect */
+    backdrop-filter: blur(15px) saturate(120%);
     -webkit-backdrop-filter: blur(15px) saturate(120%);
     box-shadow: 
-        inset 0 0 15px rgba(255, 255, 255, 0.1), /* Subtle inner shadow */
-        0 0 30px rgba(255, 0, 0, 0.4); /* Outer soft glow */
-    z-index: 10001; /* Keep above drape */
+        inset 0 0 15px rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(255, 0, 0, 0.4);
+    z-index: 10001; /* Ensure it's above the drape */
 }
 
-/* 🔥 Hover State for Glass Effect */
+/* 🔥 Hover State - Enhanced Transparency and Effect */
 .glow-btn:hover {
-    background: rgba(255, 0, 0, 0.15); /* Light red tint */
+    background: rgba(255, 0, 0, 0.1); /* Slight tint for hover */
     backdrop-filter: blur(20px) saturate(150%);
     -webkit-backdrop-filter: blur(20px) saturate(150%);
     box-shadow: 
         inset 0 0 20px rgba(255, 255, 255, 0.2),
         0 0 50px rgba(255, 0, 0, 0.6);
     transform: scale(1.05);
+}
 }
 
 /* 📱 Responsive Adjustments */
