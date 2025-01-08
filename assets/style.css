@@ -50,60 +50,51 @@ body, html {
 }
 
 
-/* 🎨 Glassmorphism Button Styling */
+/* 🎨 Base Button Styling */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.25); /* Semi-transparent dark background */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border for glass edge */
-    border-radius: 16px; /* Rounded corners for smoothness */
-    color: #fff; /* Text remains white */
+    background: rgba(0, 0, 0, 0.3); /* Base glass background */
+    border: 1px solid rgba(255, 0, 0, 0.4); /* Subtle red border */
+    border-radius: 16px; /* Rounded corners */
+    color: #fff; /* White text */
     font-weight: bold;
     font-size: 14px;
     padding: 16px 32px;
     text-align: center;
     cursor: pointer;
-    backdrop-filter: blur(8px); /* Light blur effect */
-    -webkit-backdrop-filter: blur(8px); /* Safari compatibility */
-    box-shadow: 
-        inset 0 1px 2px rgba(255, 255, 255, 0.3), /* Highlight at the top */
-        0 4px 8px rgba(0, 0, 0, 0.4), /* Outer shadow for depth */
-        0 0 20px rgba(255, 0, 0, 0.5); /* Outer glow effect */
     transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(4px); /* Base slight blur effect */
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 
+        0 0 20px rgba(255, 0, 0, 0.6), /* Outer glow */
+        inset 0 0 10px rgba(255, 0, 0, 0.4); /* Inner glow */
     z-index: 10001;
 }
 
-/* 🔥 Hover State (Enhanced Glass Effect) */
+/* ✨ Hover State with Glassmorphism */
 .glow-btn:hover {
-    background: rgba(255, 0, 0, 0.15); /* Slight red tint on hover */
-    backdrop-filter: blur(12px); /* Slightly stronger blur */
+    background: rgba(0, 0, 0, 0.1); /* Increased transparency */
+    backdrop-filter: blur(12px); /* Enhanced frosted glass effect */
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 
-        inset 0 2px 4px rgba(255, 255, 255, 0.4),
-        0 6px 12px rgba(0, 0, 0, 0.6),
-        0 0 30px rgba(255, 0, 0, 0.8); /* Enhanced outer glow */
+        0 0 50px rgba(255, 0, 0, 0.8), /* Stronger outer glow */
+        inset 0 0 20px rgba(255, 0, 0, 0.6); /* Intense inner glow */
     transform: scale(1.05); /* Slight zoom effect */
-    
-
 }
 
-/* 📱 Responsive Adjustments */
+/* 📱 Responsive Adjustments for Mobile Devices */
 @media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-        gap: 20px; /* Reduced gap for smaller screens */
-        bottom: 30%;
-    }
-
     .glow-btn {
         font-size: 12px;
-        padding: 14px 28px; /* Balanced padding */
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        padding: 12px 24px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
 
     .glow-btn:hover {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         box-shadow: 
             0 0 30px rgba(255, 0, 0, 0.7),
-            inset 0 0 20px rgba(255, 0, 0, 0.5);
+            inset 0 0 15px rgba(255, 0, 0, 0.5);
         transform: scale(1.03);
-    }
 }
