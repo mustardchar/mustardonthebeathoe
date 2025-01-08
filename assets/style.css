@@ -49,7 +49,7 @@ body, html {
     z-index: 10000;
 }
 
-/* 🌟 Glassmorphism Core Refinement */
+/* /* 🌟 Glassmorphism Core Refinement */
 .glow-btn {
     background: rgba(0, 0, 0, 0.2); /* Slightly transparent black */
     border: 1px solid rgba(255, 0, 0, 0.3); /* Subtle red border */
@@ -79,7 +79,7 @@ body, html {
         0 0 50px rgba(255, 0, 0, 0.6);
     transform: scale(1.05);
 }
-}
+
 /* 📱 Responsive Adjustments */
 @media (max-width: 768px) {
     .button-container {
