@@ -37,8 +37,9 @@ body, html {
     pointer-events: none;
 }
 
-/* 🎛️ Button Container (Spacing Adjustments) */
-/* 🎛️ Button Container (Spacing Adjustments) */
+/* 🌟 Glassmorphism and Glow Refinement */
+
+/* 🎛️ Button Container (Adjusted Alignment and Spacing) */
 .button-container {
     position: absolute;
     bottom: 40%; /* Maintain vertical alignment */
@@ -47,60 +48,59 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 15px; /* Tightened gap between buttons */
-    z-index: 10000;
+    z-index: 10000; /* Above drape */
 }
 
-/* 🎛️ Button Adjustments (Height and Padding) */
+/* 🎨 Glow and Glassmorphism Button Styling */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.2); /* Slight transparency */
-    border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
-    border-radius: 16px;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.3); /* Transparent dark background for glass effect */
+    border: 1px solid rgba(255, 0, 0, 0.4); /* Subtle red border */
+    border-radius: 16px; /* Smooth rounded corners */
+    color: #fff; /* White text for contrast */
     font-weight: bold;
-    font-size: 14px; /* Maintain font size */
-    padding: 50px 50px; /* Equal padding for height and width balance */
-    min-width: 280px; /* Locked width */
-    min-height: 140px; /* Increased height for balance */
+    font-size: 14px;
+    padding: 16px 32px; /* Consistent spacing */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(6px); /* Enhanced glassmorphism effect */
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(12px); /* Enhanced frosted glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
     box-shadow: 
-        0 0 15px rgba(255, 0, 0, 0.4); /* Subtle outer glow */
-    z-index: 10001;
+        0 0 20px rgba(255, 0, 0, 0.6), /* Outer glow */
+        inset 0 0 10px rgba(255, 0, 0, 0.4); /* Soft inner glow */
+    z-index: 10001; /* Ensures interactivity */
 }
 
-/* 🔥 Hover State (Enhanced Red Glow & Transparency) */
+/* 🔥 Hover State (Refined Glass and Glow) */
 .glow-btn:hover {
-    background: rgba(255, 0, 0, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 0, 0, 0.15); /* Slight red transparency */
+    backdrop-filter: blur(16px); /* Stronger blur on hover */
+    -webkit-backdrop-filter: blur(16px); /* Safari support */
     box-shadow: 
-        0 0 50px rgba(255, 0, 0, 0.8),
-        inset 0 0 20px rgba(255, 0, 0, 0.5); /* Controlled inner glow */
-    transform: scale(1.05);
+        0 0 50px rgba(255, 0, 0, 0.8), /* Intense outer glow */
+        inset 0 0 20px rgba(255, 0, 0, 0.6); /* Inner glow refinement */
+    transform: scale(1.05); /* Subtle zoom effect */
 }
 
-
-/* 📱 Responsive Design for Mobile Devices */
+/* 📱 Responsive Adjustments (Mobile Devices) */
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px; /* Reduced gap for smaller screens */
         bottom: 25%;
     }
 
     .glow-btn {
         font-size: 12px;
-        padding: 14px 28px;
-        min-width: 240px; /* Slightly smaller for mobile */
+        padding: 12px 24px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .glow-btn:hover {
         box-shadow: 
-            0 0 30px rgba(255, 0, 0, 0.8),
+            0 0 30px rgba(255, 0, 0, 0.7),
             inset 0 0 15px rgba(255, 0, 0, 0.5);
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 }
