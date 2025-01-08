@@ -38,34 +38,36 @@ body, html {
 }
 
 /* 🎛️ Button Container (Spacing Adjustments) */
+/* 🎛️ Button Container (Spacing Adjustments) */
 .button-container {
     position: absolute;
-    bottom: 40%; /* Adjust for better alignment */
+    bottom: 40%; /* Maintain vertical alignment */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 30px; /* Slightly reduced gap for tighter alignment */
+    gap: 15px; /* Tightened gap between buttons */
     z-index: 10000;
 }
 
-/* 🎛️ Button Adjustments (Size and Alignment) */
+/* 🎛️ Button Adjustments (Height and Padding) */
 .glow-btn {
     background: rgba(0, 0, 0, 0.2); /* Slight transparency */
     border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
     border-radius: 16px;
     color: #fff;
     font-weight: bold;
-    font-size: 14px; /* Consistent font size */
-    padding: 20px 50px; /* Slightly larger button size */
-    min-width: 280px; /* Fixed width for uniform size */
+    font-size: 14px; /* Maintain font size */
+    padding: 50px 50px; /* Equal padding for height and width balance */
+    min-width: 280px; /* Locked width */
+    min-height: 140px; /* Increased height for balance */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px); /* Enhanced glassmorphism effect */
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: 
-        0 0 10px rgba(255, 0, 0, 0.4);
+        0 0 15px rgba(255, 0, 0, 0.4); /* Subtle outer glow */
     z-index: 10001;
 }
 
@@ -75,10 +77,11 @@ body, html {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 
-        0 0 40px rgba(255, 0, 0, 0.8),
-        inset 0 0 20px rgba(255, 0, 0, 0.5);
+        0 0 50px rgba(255, 0, 0, 0.8),
+        inset 0 0 20px rgba(255, 0, 0, 0.5); /* Controlled inner glow */
     transform: scale(1.05);
 }
+
 
 /* 📱 Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
