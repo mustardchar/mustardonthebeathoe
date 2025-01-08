@@ -37,70 +37,57 @@ body, html {
     pointer-events: none;
 }
 
-/* 🎛️ Button Container */
+/* 🎛️ Button Container (Centered Alignment) */
 .button-container {
     position: absolute;
-    bottom: 35%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%; /* Vertical center */
+    left: 50%; /* Horizontal center */
+    transform: translate(-50%, -50%); /* Perfect centering */
     display: flex;
     justify-content: center;
-    gap: 15px; /* Reduced spacing for closer alignment */
+    gap: 40px; /* Comfortable spacing between buttons */
     z-index: 10000;
 }
 
-
-/* 🎛️ Button Style */
+/* 🎛️ Button Styling */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.2); /* Slight transparency */
-    border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
-    border-radius: 16px; /* Smooth corners */
-    color: #fff; /* White text */
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 16px;
+    color: #fff;
     font-weight: bold;
-    font-size: 14px; /* Consistent font size */
-    padding: 24px 48px; /* Balanced internal spacing */
-    min-width: 350px; /* Fixed width for larger appearance */
-    min-height: 180px; /* Fixed height for proportional look */
+    font-size: 14px;
+    padding: 20px 40px; /* Balanced size without altering font */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(6px); /* Light glass effect */
-    -webkit-backdrop-filter: blur(6px); /* Safari support */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     box-shadow: 
-        0 0 20px rgba(255, 0, 0, 0.4); /* Subtle red glow */;
+        0 0 10px rgba(255, 0, 0, 0.4);
     z-index: 10001;
 }
 
 /* 🔥 Hover State */
 .glow-btn:hover {
-    background: rgba(255, 0, 0, 0.2); /* Slight transparency with red tint */
-    backdrop-filter: blur(12px); /* Enhanced glass effect */
+    background: rgba(255, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 
-        0 0 60px rgba(255, 0, 0, 0.8), /* Strong red outer glow */
-        inset 0 0 30px rgba(255, 0, 0, 0.6); /* Strong red inner glow */
-    transform: scale(1.05); /* Slight zoom effect */
+        0 0 40px rgba(255, 0, 0, 0.8),
+        inset 0 0 20px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
 }
 
 /* 📱 Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        gap: 40px; /* Adjust spacing for mobile */
-        bottom: 25%;
+        gap: 30px; /* Slightly tighter spacing on mobile */
     }
 
     .glow-btn {
-        font-size: 14px; /* Consistent text size */
-        padding: 16px 32px; /* Adjusted padding for mobile */
-        min-width: 80%; /* Wider buttons on mobile */
-        min-height: 120px; /* Balanced height */
-    }
-
-    .glow-btn:hover {
-        box-shadow: 
-            0 0 40px rgba(255, 0, 0, 0.8),
-            inset 0 0 20px rgba(255, 0, 0, 0.5);
-        transform: scale(1.05);
+        font-size: 12px;
+        padding: 16px 30px;
     }
 }
