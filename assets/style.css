@@ -49,36 +49,36 @@ body, html {
     z-index: 10000;
 }
 
-/* 🎨 Glow and Glassmorphism Button Styling */
-/* 🎨 Glassmorphism and Glow Styling */
+/* 🌟 Glassmorphism Core Refinement */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.3); /* Transparent dark background for glass effect */
-    border: 1px solid rgba(255, 0, 0, 0.4); /* Subtle red border */
+    background: rgba(0, 0, 0, 0.2); /* Slightly transparent black */
+    border: 1px solid rgba(255, 0, 0, 0.3); /* Subtle red border */
     border-radius: 16px; /* Smooth rounded corners */
-    color: #fff; /* White text for contrast */
+    color: #fff; /* Clear white text */
     font-weight: bold;
     font-size: 14px;
-    padding: 20px 50px; /* Balanced spacing */
+    padding: 16px 32px; /* Balanced spacing */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(12px); /* Glass effect */
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    backdrop-filter: blur(15px) saturate(120%); /* Refined glass effect */
+    -webkit-backdrop-filter: blur(15px) saturate(120%);
     box-shadow: 
-        0 0 30px rgba(255, 0, 0, 0.6), /* Outer glow */
-        inset 0 0 15px rgba(255, 0, 0, 0.4); /* Inner glow */
-    z-index: 10001; /* Ensures buttons stay interactive */
+        inset 0 0 15px rgba(255, 255, 255, 0.1), /* Subtle inner shadow */
+        0 0 30px rgba(255, 0, 0, 0.4); /* Outer soft glow */
+    z-index: 10001; /* Keep above drape */
 }
 
-/* 🔥 Hover State (Refined Glass and Glow) */
+/* 🔥 Hover State for Glass Effect */
 .glow-btn:hover {
-    background: rgba(255, 0, 0, 0.15); /* Slight red transparency */
-    backdrop-filter: blur(16px); /* Enhanced blur on hover */
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 0, 0, 0.15); /* Light red tint */
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
     box-shadow: 
-        0 0 60px rgba(255, 0, 0, 0.8), /* Intense outer glow */
-        inset 0 0 25px rgba(255, 0, 0, 0.6); /* Inner glow refinement */
-    transform: scale(1.05); /* Slight zoom effect */
+        inset 0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 50px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+}
 }
 /* 📱 Responsive Adjustments */
 @media (max-width: 768px) {
