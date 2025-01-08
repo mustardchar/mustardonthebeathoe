@@ -32,32 +32,33 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #000000;
+    background: #000000; /* Solid black */
     z-index: 9999;
     pointer-events: none;
 }
 
-/* 🎛️ Button Container (Centered Alignment) */
+/* 🎛️ Button Container (Spacing Adjustments) */
 .button-container {
     position: absolute;
-    top: 50%; /* Vertical center */
-    left: 50%; /* Horizontal center */
-    transform: translate(-50%, -50%); /* Perfect centering */
+    bottom: 40%; /* Adjust for better alignment */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 40px; /* Comfortable spacing between buttons */
+    gap: 30px; /* Slightly reduced gap for tighter alignment */
     z-index: 10000;
 }
 
-/* 🎛️ Button Styling */
+/* 🎛️ Button Adjustments (Size and Alignment) */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2); /* Slight transparency */
+    border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border */
     border-radius: 16px;
     color: #fff;
     font-weight: bold;
-    font-size: 14px;
-    padding: 20px 40px; /* Balanced size without altering font */
+    font-size: 14px; /* Consistent font size */
+    padding: 20px 50px; /* Slightly larger button size */
+    min-width: 280px; /* Fixed width for uniform size */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -68,7 +69,7 @@ body, html {
     z-index: 10001;
 }
 
-/* 🔥 Hover State */
+/* 🔥 Hover State (Enhanced Red Glow & Transparency) */
 .glow-btn:hover {
     background: rgba(255, 0, 0, 0.2);
     backdrop-filter: blur(12px);
@@ -83,11 +84,20 @@ body, html {
 @media (max-width: 768px) {
     .button-container {
         flex-direction: column;
-        gap: 30px; /* Slightly tighter spacing on mobile */
+        gap: 20px;
+        bottom: 25%;
     }
 
     .glow-btn {
         font-size: 12px;
-        padding: 16px 30px;
+        padding: 14px 28px;
+        min-width: 240px; /* Slightly smaller for mobile */
+    }
+
+    .glow-btn:hover {
+        box-shadow: 
+            0 0 30px rgba(255, 0, 0, 0.8),
+            inset 0 0 15px rgba(255, 0, 0, 0.5);
+        transform: scale(1.05);
     }
 }
