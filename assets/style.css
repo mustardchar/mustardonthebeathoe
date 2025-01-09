@@ -1,12 +1,11 @@
-/* 🌟 Global Styles */
+🌟 Global Styles */
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent scrolling */
-    background-color: black; /* Prevent white flash */
+    overflow: hidden; /* Prevents scrolling */
 }
 
 /* 🎥 Video Background */
@@ -14,68 +13,88 @@ body, html {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; /* Ensure the video doesn’t exceed bounds */
-    z-index: -1; /* Push behind other layers */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Push video behind content */
 }
 
 .video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Scale video properly */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the screen */
 }
 
-/* 🎭 Drape Overlay (Dark Room Effect) */
+/* 🎭 Drape Effect - Ensure Buttons Can "Cut Through" */
 #drape {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 1); /* Fully opaque black */
-    z-index: 9999; /* Ensure it's above the video */
-    pointer-events: none; /* Allow interaction with buttons */
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent drape */
+    z-index: 9999;
+    pointer-events: none; /* Prevent blocking interactions */
 }
 
-/* 🎛️ Button Container */
+/* 🎛️ Button Container (Adjusted Alignment and Spacing) */
 .button-container {
     position: absolute;
-    bottom: 40%; /* Adjust for vertical alignment */
+    bottom: 40%; /* Ensures vertical alignment */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 20px; /* Space between buttons */
-    z-index: 10000; /* Ensures buttons stay on top */
+    justify-content: center;
+    gap: 15px; /* Tightened gap between buttons */
+    z-index: 10000;
 }
 
-/* 🎨 Button Styling */
+
+/* 🎨 Base Button Styling */
 .glow-btn {
-    background: rgba(10, 10, 10, 0.9); /* Darker, near-opaque black */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Softer white border */
-    border-radius: 16px; /* Smooth rounded corners */
+    background: rgba(0, 0, 0, 0.3); /* Base glass background */
+    border: 1px solid rgba(255, 0, 0, 0.4); /* Subtle red border */
+    border-radius: 16px; /* Rounded corners */
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 14px;
-    padding: 16px 32px; /* Balanced padding */
+    padding: 16px 32px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(8px); /* Subtle frosting effect */
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px); /* Base slight blur effect */
+    -webkit-backdrop-filter: blur(4px);
     box-shadow: 
-        inset 0 0 15px rgba(255, 0, 0, 0.7), /* Subtle internal red glow */
-        0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle outer shadow */
+        0 0 20px rgba(255, 0, 0, 0.6), /* Outer glow */
+        inset 0 0 10px rgba(255, 0, 0, 0.4); /* Inner glow */
+    z-index: 10001;
 }
 
-/* 📱 Responsive Adjustments */
+/* ✨ Hover State with Glassmorphism */
+.glow-btn:hover {
+    background: rgba(0, 0, 0, 0.1); /* Increased transparency */
+    backdrop-filter: blur(12px); /* Enhanced frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 
+        0 0 50px rgba(255, 0, 0, 0.8), /* Stronger outer glow */
+        inset 0 0 20px rgba(255, 0, 0, 0.6); /* Intense inner glow */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* 📱 Responsive Adjustments for Mobile Devices */
 @media (max-width: 768px) {
     .glow-btn {
         font-size: 12px;
         padding: 12px 24px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
+
+    .glow-btn:hover {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 
+            0 0 30px rgba(255, 0, 0, 0.7),
+            inset 0 0 15px rgba(255, 0, 0, 0.5);
+        transform: scale(1.03);
 } 
