@@ -57,8 +57,8 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 12px;
-    width: 250px; /* Fixed width */
-    height: 125px; /* Fixed height */
+    width: 150px; /* Fixed width */
+    height: 75px; /* Fixed height */
     text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
