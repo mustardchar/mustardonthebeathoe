@@ -76,7 +76,7 @@ body, html {
     border: 3px solid rgba(139, 0, 0, 1); /* Brighter border */
     box-shadow: 
         inset 0 0 30px rgba(255, 0, 0, 1), /* Stronger internal red glow */
-    transform: scale(1.0); /* Slight zoom */
+    transform: scale(1.5); /* Slight zoom */
 }
 
 /* 📱 Responsive Adjustments */
