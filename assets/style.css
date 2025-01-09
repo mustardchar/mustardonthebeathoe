@@ -45,7 +45,7 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between buttons */
+    gap: 10px; /* Space between buttons */
     z-index: 10000;
 }
 
@@ -57,7 +57,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 12px;
-    width: 150px; /* Fixed width */
+    width: 200px; /* Fixed width */
     height: 75px; /* Fixed height */
     text-align: center; /* Center-align text */
     cursor: pointer;
