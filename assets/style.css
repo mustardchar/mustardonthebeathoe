@@ -45,7 +45,7 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 10px; /* Space between buttons */
+    gap: 13px; /* Space between buttons */
     z-index: 10000;
 }
 
