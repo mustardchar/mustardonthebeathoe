@@ -8,45 +8,48 @@ body, html {
     overflow: hidden; /* Prevents scrolling */
 }
 
-/* 🎥 Video Background */
+/* 🎥 Video Background (Fixed & Properly Scaled) */
 .video-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Push video behind content */
+    overflow: hidden; /* Prevents movement */
+    z-index: -1; /* Push video behind other elements */
 }
 
 .video-background video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover; /* Ensures the video covers the screen */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Prevents zoom */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-/* 🎭 Drape Overlay (Dark Room Effect) */
+/* 🎭 Drape Overlay (Fixed Above Video) */
 #drape {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 1); /* Fully opaque black */
-    z-index: 9999;
-    pointer-events: none; /* Prevent blocking interactions */
+    z-index: 9999; /* Ensures it's above the video */
+    pointer-events: none; /* Allows interaction with buttons */
 }
 
-/* 🎛️ Button Container */
+/* 🎛️ Button Container (Fixed Above Drape) */
 .button-container {
     position: absolute;
-    bottom: 40%; /* Ensures vertical alignment */
+    bottom: 40%; /* Adjust for vertical alignment */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    gap: 15px; /* Space between buttons */
-    z-index: 10000;
+    gap: 20px; /* Space between buttons */
+    z-index: 10000; /* Ensures buttons stay on top */
 }
 
 /* 🎨 Base Button Styling (Crisp Glassmorphism + Internal Glow) */
