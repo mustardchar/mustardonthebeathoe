@@ -56,11 +56,14 @@ body, html {
     border-radius: 16px; /* Smooth rounded corners */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 14px;
+    
+    position: relative;
+    font-size: glow-btn {
     width: 250px; /* Fixed width */
     height: 125px; /* Fixed height */
     text-align: center; /* Center-align text */
     cursor: pointer;
+    isolation: isolate
     transition: all 0.3s ease-in-out;
     backdrop-filter: blur(8px); /* Subtle frosting effect */
     -webkit-backdrop-filter: blur(8px);
