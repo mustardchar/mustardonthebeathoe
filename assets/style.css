@@ -51,7 +51,7 @@ body, html {
 
 /* 🎨 Base Button Styling (Crisp Glassmorphism + Internal Glow) */
 .glow-btn {
-    background: rgba(255,255,255,0.05); /* very subtle soft white */
+    background: rgba(255,255,255,0.01); /* very subtle soft white */
     border: 1px solid rgba(139, 0, 0, 1); /* deep red  border */
     border-radius: 16px; /* Smooth rounded corners */
     color: #fff; /* White text */
@@ -72,12 +72,12 @@ body, html {
 
 /* ✨ Hover State */
 .glow-btn:hover {
-    background: rgba(255,255,255,0.01); /* soft subtle white */
+    background: rgba(255,255,255,0.03); /* soft subtle white */
     border: 3px solid rgba(139, 0, 0, 1); /* Brighter border */
     box-shadow: 
-        inset 0 0 20px rgba(255, 0, 0, 1), /* Stronger internal red glow */
+        inset 0 0 30px rgba(255, 0, 0, 1), /* Stronger internal red glow */
         0 6px 12px rgba(0, 0, 0, 0.6); /* More prominent outer shadow */
-    transform: scale(1.15); /* Slight zoom */
+    transform: scale(1.5); /* Slight zoom */
 }
 
 /* 📱 Responsive Adjustments */
