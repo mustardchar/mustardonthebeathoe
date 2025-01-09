@@ -25,19 +25,19 @@ body, html {
     object-fit: cover; /* Ensures the video covers the screen */
 }
 
-/* 🎭 Drape Effect - Ensure Buttons Can "Cut Through" */
+/* 🎭 Drape Overlay (Dark Room Effect) */
 #drape {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.9); /* Semi-transparent drape */
+    background: rgba(0, 0, 0, 1); /* Fully opaque black */
     z-index: 9999;
     pointer-events: none; /* Prevent blocking interactions */
 }
 
-/* 🎛️ Button Container (Adjusted Alignment and Spacing) */
+/* 🎛️ Button Container */
 .button-container {
     position: absolute;
     bottom: 40%; /* Ensures vertical alignment */
@@ -45,58 +45,58 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 15px; /* Tightened gap between buttons */
+    gap: 15px; /* Space between buttons */
     z-index: 10000;
 }
 
-
-/* 🎨 Base Button Styling (Refined) */
+/* 🎨 Base Button Styling (Crisp Glassmorphism + Internal Glow) */
 .glow-btn {
-    background: rgba(255, 255, 255, 0.1); /* Subtle transparent white background */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft white border */
-    border-radius: 16px; /* Smooth rounded edges */
+    background: rgba(10, 10, 10, 0.9); /* Darker, near-opaque black */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Softer white border */
+    border-radius: 16px; /* Smooth rounded corners */
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 14px;
-    padding: 14px 28px; /* Balanced padding for button size */
+    padding: 16px 32px; /* Balanced padding */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(8px); /* Balanced blur for glassmorphism */
+    backdrop-filter: blur(8px); /* Subtle frosting effect */
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 
-        0 4px 6px rgba(0, 0, 0, 0.2), /* Subtle shadow for depth */
-        inset 0 0 8px rgba(255, 255, 255, 0.1); /* Soft inner glow */
+        inset 0 0 15px rgba(255, 0, 0, 0.7), /* Subtle internal red glow */
+        0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle outer shadow */
     z-index: 10001;
 }
 
 /* ✨ Hover State */
 .glow-btn:hover {
-    background: rgba(255, 255, 255, 0.2); /* Slightly lighter glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(12px); /* Increased blur on hover */
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(30, 30, 30, 0.8); /* Slightly lighter black */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Brighter border */
     box-shadow: 
-        0 8px 16px rgba(0, 0, 0, 0.3), /* Deeper shadow for elevation */
-        inset 0 0 12px rgba(255, 255, 255, 0.2); /* Enhanced inner glow */
-    transform: scale(1.05); /* Slight zoom effect */
+        inset 0 0 20px rgba(255, 0, 0, 0.9), /* Stronger internal red glow */
+        0 6px 12px rgba(0, 0, 0, 0.6); /* More prominent outer shadow */
+    transform: scale(1.05); /* Slight zoom */
 }
 
-/* 📴 Responsive Adjustments */
+/* 📱 Responsive Adjustments */
 @media (max-width: 768px) {
     .glow-btn {
         font-size: 12px;
         padding: 12px 24px;
-        backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px); /* Softer frosting */
         -webkit-backdrop-filter: blur(6px);
+        box-shadow: 
+            inset 0 0 12px rgba(255, 0, 0, 0.6), /* Softer internal glow */
+            0 3px 6px rgba(0, 0, 0, 0.4); /* Lighter outer shadow */
     }
 
     .glow-btn:hover {
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         box-shadow: 
-            0 4px 8px rgba(0, 0, 0, 0.2),
-            inset 0 0 8px rgba(255, 255, 255, 0.1);
+            inset 0 0 18px rgba(255, 0, 0, 0.8),
+            0 5px 10px rgba(0, 0, 0, 0.5);
         transform: scale(1.03);
     }
 }
