@@ -51,8 +51,8 @@ body, html {
 
 /* 🎨 Base Button Styling (Crisp Glassmorphism + Internal Glow) */
 .glow-btn {
-    background: rgba(10, 10, 10, 0.9); /* Darker, near-opaque black */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Softer white border */
+    background: rgba(255,255,255,0.05); /* very subtle soft white */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Softer white border */
     border-radius: 16px; /* Smooth rounded corners */
     color: #fff; /* White text */
     font-weight: bold;
