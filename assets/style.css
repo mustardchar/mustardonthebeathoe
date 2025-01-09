@@ -53,10 +53,10 @@ body, html {
 .glow-btn {
     background: rgba(255,255,255,0.01); /* very subtle soft white */
     border: .25px solid rgba(139, 0, 0, 1); /* deep red  border */
-    border-radius: 11px; /* Smooth rounded corners */
+    border-radius: 20px; /* Smooth rounded corners */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
     width: 225px; /* Fixed width */
     height: 100px; /* Fixed height */
     text-align: center; /* Center-align text */
