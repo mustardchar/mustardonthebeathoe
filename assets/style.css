@@ -57,8 +57,9 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 14px;
-    padding: 16px 32px; /* Balanced padding */
-    text-align: center;
+    width: 150px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     backdrop-filter: blur(8px); /* Subtle frosting effect */
