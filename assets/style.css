@@ -40,7 +40,7 @@ body, html {
 /* 🎛️ Button Container */
 .button-container {
     position: absolute;
-    bottom: 40%; /* Ensures vertical alignment */
+    bottom: 30%; /* Ensures vertical alignment */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
