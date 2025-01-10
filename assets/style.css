@@ -40,13 +40,13 @@ body, html {
     
     mask-image: linear-gradient(transparent 20%, black 25%);
     mask-position: center;
-    mask-size: 150px 75px;
+    mask-size: 40px 80px;
     mask-repeat: no-repeat;
     
     
     -webkit-mask-image: linear-gradient(transparent 20%, black 25%);
     -webkit-mask-position: center;
-    -webkit-mask-size: 150px 75px;
+    -webkit-mask-size: 40px 80px;
     -webkit-mask-repeat: no-repeat;
 }
 
@@ -70,7 +70,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 12px;
-    padding: 150px  75px; /* Fixed width */ 
+    padding: 40px  80px; /* Fixed width */ 
     text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
