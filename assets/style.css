@@ -40,13 +40,13 @@ body, html {
     
     mask-image: linear-gradient(transparent 20%, black 25%);
     mask-position: center;
-    mask-size: 100px 100px;
+    mask-size: 200px 200px;
     mask-repeat: no-repeat;
     
     
     -webkit-mask-image: linear-gradient(transparent 20%, black 25%);
     -webkit-mask-position: center;
-    -webkit-mask-size: 100px 100px;
+    -webkit-mask-size: 200px 200px;
     -webkit-mask-repeat: no-repeat;
 }
 
@@ -74,7 +74,7 @@ body, html {
     text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(4px); /* Subtle frosting effect */
+    backdrop-filter: blur(1px); /* Subtle frosting effect */
     -webkit-backdrop-filter: blur(4px);
     box-shadow: 
         inset 0 0 2px rgba(139, 0, 0, 1); /* Subtle internal red glow */
@@ -105,8 +105,8 @@ body, html {
     }
 
     .glow-btn:hover {
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px)
         box-shadow: 
             inset 0 0 18px rgba(255, 0, 0, 0.8);
                     0 5px rgba(0, 0, 0, 0.5); 
