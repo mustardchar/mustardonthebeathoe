@@ -19,6 +19,7 @@ body, html {
     z-index: -1; /* Push video behind content */
 }
 
+
 .video-background video {
     width: 100vw;
     height: 100vh;
