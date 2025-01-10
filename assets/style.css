@@ -33,9 +33,17 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 1); /* Fully opaque black */
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent black overlay */
     z-index: 9999;
-    pointer-events: none; /* Prevents blocking interactions */
+    pointer-events: none; /* Allow interaction with buttons */
+    mask-image: radial-gradient(circle, transparent 30%, black 35%);
+    mask-position: center center;
+    mask-size: 225px 100px;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: radial-gradient(circle, transparent 30%, black 35%);
+    -webkit-mask-position: center center;
+    -webkit-mask-size: 225px 100px;
+    -webkit-mask-repeat: no-repeat;
 }
 
 /* 🎛️ Button Container */
