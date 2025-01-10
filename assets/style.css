@@ -40,13 +40,13 @@ body, html {
     
     mask-image: linear-gradient(transparent 20%, black 25%);
     mask-position: center;
-    mask-size: 200px 200px;
+    mask-size: 300px 300px;
     mask-repeat: no-repeat;
     
     
     -webkit-mask-image: linear-gradient(transparent 20%, black 25%);
     -webkit-mask-position: center;
-    -webkit-mask-size: 200px 200px;
+    -webkit-mask-size: 300px 300px;
     -webkit-mask-repeat: no-repeat;
 }
 
