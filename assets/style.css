@@ -53,7 +53,7 @@ body, html {
 /* 🎛️ Button Container */
 .button-container {
     position: absolute;
-    bottom: 30%; /* Ensures vertical alignment */
+    bottom: 40%; /* Ensures vertical alignment */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -66,16 +66,16 @@ body, html {
 .glow-btn {
     background: rgba(255,255,255,0.01); /* very subtle soft white */
     border: .5px solid rgba(139, 0, 0, 1); /* deep red  border */
-    border-radius: 20px; /* Smooth rounded corners */
+    border-radius: 25px; /* Smooth rounded corners */
     color: #fff; /* White text */
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     padding: 40px  80px; /* Fixed width */ 
     text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(8px); /* Subtle frosting effect */
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px); /* Subtle frosting effect */
+    -webkit-backdrop-filter: blur(4px);
     box-shadow: 
         inset 0 0 0px rgba(139, 0, 0, 1), /* Subtle internal red glow */
         0 0px 0px rgba(0, 0, 0, 0.5); /* Subtle outer shadow */
@@ -89,17 +89,18 @@ body, html {
     box-shadow:
         inset 0 0 25px rgba(255, 0, 0, 1), /* Stronger internal red glow */
         0 8px 12px rgba(0, 0, 0, 0.5); /* Subtle outer shadow */
-    font-size: 13px;
-    transform: scale(1.05); /* Slight zoom */
+    font-size: 15px;
+    transform: scale(1.5); /* Slight zoom */
 }
 
 /* 📱 Responsive Adjustments */
 @media (max-width: 768px) {
     .glow-btn {
         font-size: 12px;
-        padding: 12px 24px;
-        backdrop-filter: blur(6px); /* Softer frosting */
-        -webkit-backdrop-filter: blur(6px);
+        padding: 12
+            10px 24px;
+        backdrop-filter: blur(3px); /* Softer frosting */
+        -webkit-backdrop-filter: blur(3px)
         box-shadow: 
             inset 0 0 12px rgba(255, 0, 0, 0.6); /* Softer internal glow */
     }
