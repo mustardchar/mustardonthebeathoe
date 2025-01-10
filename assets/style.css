@@ -8,7 +8,7 @@ body, html {
     overflow: hidden; /* Prevents scrolling */
 }
 
-/* 🎥 Video Background */
+/* Video Background */
 .video-background {
     position: fixed;
     top: 0;
