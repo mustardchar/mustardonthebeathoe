@@ -35,7 +35,15 @@ body, html {
     background: rgba(0, 0, 0, 1); /* Fully opaque black */
     z-index: 9999;
     pointer-events: none; /* Prevent blocking interactions */
+    clip-path: circle(0px at 50% 50%); /* No hole by default */
+    transition: clip-path 0.3s ease; /* Smooth animation */
+
 }
+
+/* 🎛️ Button Hover Effect */
++ .glow-btn:hover ~ #drape {
++   clip-path: circle(200px at 50% 50%); /* Punch out around the button */
++ }
 
 /* 🎛️ Button Container */
 .button-container {
@@ -103,3 +111,6 @@ body, html {
         transform: scale(1.03);
     }
 }
+
+
+
