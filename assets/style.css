@@ -38,15 +38,15 @@ body, html {
     pointer-events: none; /* Allow interaction with buttons */
     
     
-    mask-image: radial-gradient(circle, transparent 30%, black 35%);
+    mask-image: linear-gradient(transparent 20%, black 25%);
     mask-position: center;
-    mask-size: 75px 150px;
+    mask-size: 150px 75px;
     mask-repeat: no-repeat;
     
     
     -webkit-mask-image: linear-gradient(transparent 20%, black 25%);
     -webkit-mask-position: center;
-    -webkit-mask-size: 75px 150px;
+    -webkit-mask-size: 150px 75px;
     -webkit-mask-repeat: no-repeat;
 }
 
@@ -70,7 +70,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 12px;
-    padding: 75px  150px; /* Fixed width */ 
+    padding: 150px  75px; /* Fixed width */ 
     text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
