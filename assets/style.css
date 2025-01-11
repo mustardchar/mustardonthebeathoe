@@ -51,7 +51,7 @@ body, html {
 
 /* 🎨 Base Button Styling (Crisp Glassmorphism + Internal Glow) */
 .glow-btn {
-    background: rgba(255,255,255,0.01); /* very subtle soft white */
+    background: rgba( 0, 0, 0, 1); /* very subtle soft white */
     border: .5px solid rgba(139, 0, 0, 1); /* deep red  border */
     border-radius: 20px; /* Smooth rounded corners */
     color: #fff; /* White text */
@@ -76,7 +76,7 @@ body, html {
     border: 2px solid rgba(139, 0, 0, 1); /* Brighter border */
     box-shadow: 
         inset 0 0 25px rgba(255, 0, 0, 1), /* Stronger internal red glow */
-        0 8px 12px rgba(0, 0, 0, 0.5); /* Subtle outer shadow */
+        0 8px 12px rgba(139, 0, 0, 1); /* Subtle outer shadow */
     font-size: 13px;
 
     transform: scale(1.05); /* Slight zoom */
@@ -91,6 +91,7 @@ body, html {
         -webkit-backdrop-filter: blur(6px);
         box-shadow: 
             inset 0 0 12px rgba(255, 0, 0, 0.6), /* Softer internal glow */
+             0 5px rgba(0, 0, 0, 0.5);
 
     }
 
