@@ -37,12 +37,6 @@ body, html {
     z-index: 9999;
     pointer-events: none; /* Allow interaction with buttons */
     
-    
-    mask-image: linear-gradient(transparent 20%, black 25%);
-    mask-position: center;
-    mask-size: 40px 80px;
-    mask-repeat: no-repeat;
-    
 
 }
 
