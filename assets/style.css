@@ -36,19 +36,9 @@ body, html {
     background: rgba(0, 0, 0, 1); /* Semi-transparent black overlay */
     z-index: 9999;
     pointer-events: none; /* Allow interaction with buttons */
-    
+
 
 }
-
-
-
-
-
-
-
-
-
-
 /* 🎛️ Button Container */
 .button-container {
     position: fixed;
