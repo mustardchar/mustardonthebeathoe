@@ -25,6 +25,7 @@ body, html {
     height: 100vh;
     object-fit: cover; /* Ensures the video covers the screen */
 }
+
 /* 🎭 Drape Overlay (Dark Room Effect) */
 #drape {
     position: fixed;
@@ -32,12 +33,23 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background: rgba(0, 0, 0, 1); /* Semi-transparent black overlay */
     z-index: 9999;
     pointer-events: none; /* Allow interaction with buttons */
-
-
+    
+    
+    mask-image: linear-gradient(transparent 20%, black 25%);
+    mask-position: center;
+    mask-size: 40px 80px;
+    mask-repeat: no-repeat;
+    
+    
+    -webkit-mask-image: linear-gradient(transparent 20%, black 25%);
+    -webkit-mask-position: center;
+    -webkit-mask-size: 40px 80px;
+    -webkit-mask-repeat: no-repeat;
 }
+
 /* 🎛️ Button Container */
 .button-container {
     position: fixed;
@@ -100,5 +112,3 @@ body, html {
                     0 5px rgba(0, 0, 0, 0.5); 
         transform: scale(1.03);
     }
-    
-}
