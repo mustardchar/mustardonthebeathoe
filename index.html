@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustard on the Beat Hoe</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>Interactive Buttons</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,19 +12,21 @@
     <div class="video-background">
         <video autoplay muted loop>
             <source src="assets/videos/gs_hero_vid.mp4" type="video/mp4">
+            <!-- Add other video formats if necessary -->
+            <p>Your browser does not support the video tag.</p>
         </video>
     </div>
 
-    <!-- 🎭 Drape Overlay (Dark Room Effect) -->
+    <!-- 🎭 Drape Overlay -->
     <div id="drape"></div>
 
-    <!-- 🎛️ Navigation Buttons -->
+    <!-- 🎛️ Button Container -->
     <div class="button-container">
-        <button class="glow-btn" id="merch-btn">MERCH STORE</button>
-        <button class="glow-btn" id="donate-btn">DONATE TACOS</button>
-        <button class="glow-btn" id="spicy-btn" onclick="openVideo()">SURPRISE ME, SPICY</button>
+        <button class="glow-btn">MERCH STORE</button>
+        <button class="glow-btn">DONATE TACOS</button>
+        <button class="glow-btn">SURPRISE ME, SPICY</button>
     </div>
 
-    <script src="assets/script.js"></script>
 </body>
 </html>
+
