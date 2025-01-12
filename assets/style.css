@@ -50,8 +50,9 @@ body, html {
 }
 
 /* 🎨 Base Button Styling (Crisp Glassmorphism + Internal Glow) */
+/* Base Button Styling */
 .glow-btn {
-    background: rgba(0, 0, 0, 0.1); /* Very subtle soft white */
+    background: rgba(0, 0, 0, 0.1); /* Subtle background */
     border: 1px solid rgba(139, 0, 0, 1); /* Deep red border */
     border-radius: 15px; /* Smooth rounded corners */
     color: #fff; /* White text */
@@ -61,17 +62,17 @@ body, html {
     text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(3px); /* Subtle frosting effect */
-    -webkit-backdrop-filter: blur(3px);
-    box-shadow: inset 0 0 15px 6px rgba(139, 0, 0, 0.9); /* Strong inner glow */
+    backdrop-filter: blur(2px); /* Light frosting */
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 12px 4px rgba(139, 0, 0, 0.5); /* Noticeable but subtle inner glow */
 }
 
-/* Hover State for Buttons */
+/* Hover State */
 .glow-btn:hover {
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    transform: scale(1.05); /* Slight zoom */
-    box-shadow: inset 0 0 25px 8px rgba(139, 0, 0, 1); /* Intense hover inner glow */
+    backdrop-filter: blur(3px); /* Slightly stronger frosting */
+    -webkit-backdrop-filter: blur(3px);
+    transform: scale(1.05); /* Slight zoom for hover */
+    box-shadow: inset 0 0 30px 10px rgba(139, 0, 0, 1); /* Bold and vibrant inner glow */
 }
 
 /* 📱 Responsive Adjustments */
