@@ -58,7 +58,7 @@ body, html {
     color: #fff; /* White text */
     font-weight: bold;
     font-size: 16px;
-    padding: 20px 40px; /* Adaptive padding */
+    padding: 20px 600px; /* Adaptive padding */
     text-align: center; /* Center-align text */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -79,7 +79,7 @@ body, html {
 @media (max-width: 768px) {
     .glow-btn {
         font-size: 14px;
-        padding: 15px 30px; /* Reduced padding for smaller screens */
+        padding: 15px 60px; /* Reduced padding for smaller screens */ 
         backdrop-filter: blur(2px); /* Softer frosting */
         -webkit-backdrop-filter: blur(2px);
         box-shadow: inset 0 0 12px 5px rgba(139, 0, 0, 0.8); /* Softer inner glow */
@@ -93,7 +93,7 @@ body, html {
 @media (max-width: 480px) {
     .glow-btn {
         font-size: 12px;
-        padding: 10px 20px; /* Compact padding for small devices */
+        padding: 10px 300px; /* Compact padding for small devices */
         box-shadow: inset 0 0 10px 4px rgba(139, 0, 0, 0.7); /* Softer glow */
     }
 }
