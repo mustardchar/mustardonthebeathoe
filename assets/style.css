@@ -33,20 +33,13 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 1); /* Fully opaque black */
+    background: rgba(0, 0, 0, 0.8); /* Fully opaque black */
     z-index: 1; /* Ensure it appears above the background */
     pointer-events: none; /* Allow interaction with buttons/windows */
 
     /* Peephole Effect */
-    mask-image: linear-gradient(transparent 20%, black 25%);
-    mask-position: center;
-    mask-size: 40px 70px;
-    mask-repeat: no-repeat;
-
-    -webkit-mask-image: linear-gradient(transparent 20%, black 25%);
-    -webkit-mask-position: center;
-    -webkit-mask-size: 40px 70px;
-    -webkit-mask-repeat: no-repeat;
+    mask-image: none;
+    -webkit-mask-image: none;
 }
 
 /* 🎛️ Button Container */
