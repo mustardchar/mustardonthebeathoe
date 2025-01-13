@@ -35,7 +35,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.9); /* Solid black, slightly transparent */
+    background: #000; /* Solid black, fully opaque */
     z-index: 1; /* Ensure it appears above the video */
 }
 
@@ -53,8 +53,8 @@ body {
 /* 🎨 Glow Buttons */
 .glow-btn {
     position: relative;
-    width: 200px;
-    height: 60px;
+    width: 120px; /* Width for 30:60 ratio */
+    height: 60px; /* Height */
     border-radius: 15px; /* Rounded corners */
     background: transparent; /* Button window effect */
     border: 2px solid rgba(255, 255, 255, 0.6); /* White border */
@@ -74,3 +74,18 @@ body {
     box-shadow: inset 0 0 20px 6px rgba(139, 0, 0, 1); /* Stronger inner glow */
     transform: scale(1.05); /* Slight zoom */
 }
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+    .button-container {
+        flex-wrap: wrap;
+        gap: 10px; /* Adjust spacing for smaller screens */
+        justify-content: center; /* Center buttons */
+    }
+
+    .glow-btn {
+        width: 90px; /* Smaller buttons */
+        height: 45px; /* Adjust height */
+        font-size: 12px; /* Smaller font */
+        line-height: 45px; /* Match height */
+    }
